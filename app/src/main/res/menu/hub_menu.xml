@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="withText|always"
+        android:title="My events" />
+
+    <item
+        android:id="@+id/categories"
+        android:icon="@drawable/ic_categories"
+        app:showAsAction="withText|always"
+        android:title="Categories" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="withText|always"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/map_view"
+        android:icon="@drawable/ic_map"
+        android:title="Map"
+        app:showAsAction="withText|always"/>
+
+</menu>

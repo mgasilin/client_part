@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@drawable/ic_light_theme_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".hubActivityFragments.CategoriesFragment">
+
+        <CheckBox
+            android:id="@+id/Cat1"
+            android:textColor="@color/text_color"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Уличное мероприятие"
+            />
+        <CheckBox
+            android:id="@+id/Cat2"
+            android:textColor="@color/text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Групповое мероприятие"
+            />
+        <CheckBox
+            android:id="@+id/Cat3"
+            android:textColor="@color/text_color"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Мероприятие для всей семьи"
+            />
+        <CheckBox
+            android:id="@+id/Cat4"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@color/text_color"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Бесплатное мероприятие"
+            />
+        <CheckBox
+            android:layout_margin="10dp"
+            android:id="@+id/Cat5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Мероприятие с ковидными ограничениями"
+            />
+        <CheckBox
+            android:layout_margin="10dp"
+            android:id="@+id/Cat6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@color/text_color"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Мероприятие с предварительной регистрацией"
+            />
+        <CheckBox
+            android:layout_margin="10dp"
+            android:id="@+id/Cat7"
+            android:layout_width="match_parent"
+            android:textColor="@color/text_color"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Спротивное мероприятие"
+            />
+        <CheckBox
+            android:layout_margin="10dp"
+            android:id="@+id/Cat8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textColor="@color/text_color"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Мероприятие с ограничениями по возврасту"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/pos"
+                android:layout_width="0dp"
+                android:textColor="@color/text_color"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:text="задать место"
+                android:textColor="@color/text_color"
+                android:background="@drawable/ic_light_teme_light_blue_rect"
+                android:layout_height="match_parent"
+                android:id="@+id/setPos"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

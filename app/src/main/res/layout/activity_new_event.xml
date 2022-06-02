@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    class="androidx.appcompat.app.AlertController$RecycleListView"
+    android:layout_width="match_parent"
+    android:background="@drawable/ic_light_theme_dark_blue_rectangle"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_margin="16dp"
+            android:textColor="@color/text_color"
+            android:layout_width="match_parent"
+            android:id="@+id/tv1NewEv"
+            android:text="Имя мероприятия"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/getName"
+            android:textColor="@color/text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/text_color"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:hint="name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv1NewEv" />
+
+        <TextView
+            android:layout_margin="16dp"
+            android:textColor="@color/text_color"
+            android:layout_width="match_parent"
+            android:id="@+id/tv2NewEv"
+            android:text="Описание мероприятия"
+            app:layout_constraintTop_toBottomOf="@+id/getName"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/getDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/text_color"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:layout_margin="16dp"
+            android:hint="description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv2NewEv" />
+
+        <TextView
+            android:id="@+id/getAdress"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:layout_margin="16dp"
+            android:text="Адрес:"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/startAdressActivity" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startAdressActivity"
+            android:layout_width="match_parent"
+            android:background="@drawable/ic_light_teme_light_blue_rect"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="задать адрес"
+            android:textColor="@color/text_color"
+            app:layout_constraintTop_toBottomOf="@+id/getDescription" />
+
+        <EditText
+            android:id="@+id/getDate"
+            android:layout_width="0dp"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:gravity="center"
+            android:textColorHint="@color/text_color"
+            android:hint="дата в формате ддммгггг"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@+id/getAdress" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:constraint_referenced_ids="isStreet, isGroup, isFamily, isFree, hasCovid, hasRegister, isSport, hasAgeRestrictions"
+            app:flow_horizontalGap="16dp"
+            app:flow_horizontalStyle="packed"
+            app:flow_verticalGap="16dp"
+            app:flow_verticalStyle="packed"
+            app:flow_wrapMode="chain"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintTop_toBottomOf="@+id/getDate"
+            app:layout_constraintBottom_toTopOf="@+id/checkNewEvent"
+            />
+
+        <CheckBox
+            android:id="@+id/isStreet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Уличное мероприятие" />
+
+        <CheckBox
+            android:id="@+id/isGroup"
+            tools:ignore="MissingConstraints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Групповое мероприятие" />
+
+        <CheckBox
+            android:id="@+id/isFamily"
+            tools:ignore="MissingConstraints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Семейное мероприятие" />
+
+        <CheckBox
+            android:id="@+id/isFree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:ignore="MissingConstraints"
+            android:button="@null"
+            android:textColor="@color/text_color"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Бесплатное мероприятие" />
+
+        <CheckBox
+            android:id="@+id/hasCovid"
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:ignore="MissingConstraints"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Мероприятие с ковидными ограничениями" />
+
+        <CheckBox
+            android:id="@+id/hasRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_gravity="center"
+            tools:ignore="MissingConstraints"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Мероприятие с регистрацией" />
+
+        <CheckBox
+            android:id="@+id/isSport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_gravity="center"
+            android:button="@null"
+            tools:ignore="MissingConstraints"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Спротивное мероприятие" />
+
+        <CheckBox
+            android:id="@+id/hasAgeRestrictions"
+            android:textColor="@color/text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox"
+            android:text="Мероприятие с возрастными ограничениями"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkNewEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/ic_light_teme_light_blue_rect"
+            app:layout_constraintEnd_toStartOf="@+id/goBack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="done" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@+id/checkNewEvent"
+            android:background="@drawable/ic_light_teme_light_blue_rect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Назад" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

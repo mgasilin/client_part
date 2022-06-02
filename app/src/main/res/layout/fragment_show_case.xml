@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_round_bg_for_rv"
+    tools:context=".tempThings.ShowCaseFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:background="@drawable/ic_light_theme_light_blue_rect_huge"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_name"
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:background="@drawable/ic_light_theme_light_blue_rect_huge"
+        android:textColor="@color/text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_description"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_light_theme_light_blue_rect_huge"
+        android:textColor="@color/text_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_adress"
+        android:gravity="center"
+        />
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:textColorHint="@color/text_color"
+        android:textColor="@color/text_color"
+        android:layout_height="wrap_content"
+        android:id="@+id/event_show"
+        app:layout_constraintEnd_toStartOf="@+id/close"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:background="@drawable/ic_light_teme_light_blue_rect"
+        android:text="Посмотреть"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="0dp"
+           android:layout_marginLeft="5dp"
+           android:layout_marginRight="50dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="15dp"
+           android:background="@drawable/ic_light_teme_light_blue_rect"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toEndOf="@+id/event_show"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           android:id="@+id/close"
+           android:textColor="@color/text_color"
+           android:text="Закрыть"
+           android:layout_gravity="center"
+           android:gravity="center"
+           />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
