@@ -51,6 +51,7 @@ android:background="@drawable/ic_light_theme_background"
         app:layout_constraintVertical_bias="0" />
 
     <TextView
+        android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@+id/mainTvTop"
         android:layout_margin="10dp"
         android:id="@+id/entry_tv1"
@@ -63,6 +64,7 @@ android:background="@drawable/ic_light_theme_background"
         tools:layout_editor_absoluteY="260dp" />
 
     <EditText
+        android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:id="@+id/login"
@@ -74,13 +76,14 @@ android:background="@drawable/ic_light_theme_background"
         android:background="@drawable/ic_light_theme_light_blue_rect_huge"
         android:gravity="center"
         android:hint="Логин"
-        android:textColor="@color/text_color"
-        android:textColorHint="@color/text_color"
+        android:textColor="@color/dark_text_color"
+        android:textColorHint="@color/dark_text_color"
         app:layout_constraintEnd_toEndOf="@+id/entryGuidelineRight"
         app:layout_constraintStart_toStartOf="@+id/entryGuidelineLeft"
         app:layout_constraintTop_toBottomOf="@+id/entry_tv1" />
 
     <TextView
+        android:textSize="15sp"
         android:id="@+id/entry_tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,6 +95,7 @@ android:background="@drawable/ic_light_theme_background"
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
     <EditText
+        android:textSize="20sp"
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -102,8 +106,8 @@ android:background="@drawable/ic_light_theme_background"
         android:gravity="center"
         android:hint="Пароль"
         android:layout_marginTop="10dp"
-        android:textColor="@color/text_color"
-        android:textColorHint="@color/text_color"
+        android:textColor="@color/dark_text_color"
+        android:textColorHint="@color/dark_text_color"
         app:layout_constraintEnd_toEndOf="@+id/entryGuidelineRight"
         app:layout_constraintStart_toStartOf="@+id/entryGuidelineLeft"
         app:layout_constraintTop_toBottomOf="@+id/entry_tv2" />
@@ -119,7 +123,8 @@ android:background="@drawable/ic_light_theme_background"
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_button"
         android:layout_width="0dp"
-        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:textColor="@color/dark_text_color"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/ic_light_teme_light_blue_rect"
@@ -132,10 +137,11 @@ android:background="@drawable/ic_light_theme_background"
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registerButton"
-        android:layout_width="0dp"
-        android:textColor="@color/text_color"
+        android:layout_width="wrap_content"
+        android:textColor="@color/dark_text_color"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:textSize="20sp"
         android:text="регистрация"
         android:background="@drawable/ic_light_teme_light_blue_rect"
         app:layout_constraintBottom_toBottomOf="@+id/login_button"

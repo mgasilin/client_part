@@ -177,7 +177,7 @@ public class CategoriesFragment extends Fragment {
         sharedPreferences=getActivity().getPreferences(Context.MODE_PRIVATE);
         LatLng pos=new LatLng(Double.parseDouble(sharedPreferences.getString("start_lat", "57.333")),Double.parseDouble(sharedPreferences.getString("start_lng", "37.333")));
         TextView positionInfo = view.findViewById(R.id.pos);
-        positionInfo.setText("текущее место отсчета расстояния - "+ GeoThing.getAddress(pos.latitude,pos.longitude,getActivity()));
+        positionInfo.setText("Текущее место отсчета расстояния - "+ GeoThing.getAddress(pos.latitude,pos.longitude,getActivity()));
         AppCompatButton setPosition = view.findViewById(R.id.setPos);
         setPosition.setOnClickListener(new View.OnClickListener() {
             @Override

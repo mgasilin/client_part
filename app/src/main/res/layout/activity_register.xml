@@ -49,6 +49,7 @@
 
         />
     <TextView
+        android:textSize="15sp"
         android:textColor="@color/text_color"
         app:layout_constraintHorizontal_bias="0"
         android:id="@+id/register_tv"
@@ -65,6 +66,7 @@
         app:layout_constraintVertical_bias="0" />
 
     <EditText
+        android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -75,14 +77,15 @@
         android:gravity="center"
         android:hint="Логин"
         android:background="@drawable/ic_light_theme_light_blue_rect_huge"
-        android:textColorHint="@color/text_color"
-        android:textColor="@color/text_color"
+        android:textColorHint="@color/dark_text_color"
+        android:textColor="@color/dark_text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/registerGuidelineRight"
         app:layout_constraintStart_toStartOf="@+id/registerGuidelineLeft"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toBottomOf="@+id/register_tv"/>
     <TextView
+        android:textSize="15sp"
         android:textColor="@color/text_color"
         android:id="@+id/register_tv2"
         android:layout_width="wrap_content"
@@ -100,6 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/regLogin"
         app:layout_constraintVertical_bias="0" />
     <EditText
+        android:textSize="20sp"
         android:id="@+id/regPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -110,14 +114,15 @@
         android:gravity="center"
         android:hint="Пароль"
         android:background="@drawable/ic_light_theme_light_blue_rect_huge"
-        android:textColorHint="@color/text_color"
-        android:textColor="@color/text_color"
+        android:textColorHint="@color/dark_text_color"
+        android:textColor="@color/dark_text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/registerGuidelineRight"
         app:layout_constraintStart_toStartOf="@+id/registerGuidelineLeft"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintTop_toBottomOf="@+id/register_tv2"/>
     <TextView
+        android:textSize="15sp"
         android:textColor="@color/text_color"
         app:layout_constraintHorizontal_bias="0"
         android:id="@+id/register_tv3"
@@ -136,11 +141,12 @@
         app:layout_constraintTop_toBottomOf="@+id/regPassword"
         app:layout_constraintVertical_bias="0" />
     <EditText
+        android:textSize="20sp"
         android:id="@+id/regName"
         android:layout_width="0dp"
         android:background="@drawable/ic_light_theme_light_blue_rect_huge"
-        android:textColorHint="@color/text_color"
-        android:textColor="@color/text_color"
+        android:textColorHint="@color/dark_text_color"
+        android:textColor="@color/dark_text_color"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
@@ -161,12 +167,13 @@
         />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/register"
-        android:textColor="@color/text_color"
+        android:textColor="@color/dark_text_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:gravity="center"
+        android:textSize="17sp"
         android:background="@drawable/ic_light_theme_light_blue_rect_huge"
         android:text="Зарегистрироваться"
         app:layout_constraintBottom_toBottomOf="parent"

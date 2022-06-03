@@ -16,16 +16,18 @@
         app:layout_constraintEnd_toStartOf="@+id/setGetPosFr"
         android:id="@+id/backGetPosFr"
         android:text="Отмена"
+        android:textSize="18sp"
         android:background="@drawable/ic_light_teme_light_blue_rect"
-        android:textColor="@color/text_color"
+        android:textColor="@color/dark_text_color"
         android:layout_height="wrap_content"/>
 
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="0dp"
             android:layout_margin="10dp"
+            android:textSize="18sp"
             android:background="@drawable/ic_light_teme_light_blue_rect"
-            android:textColor="@color/text_color"
+            android:textColor="@color/dark_text_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@+id/getPosFrGl"
             app:layout_constraintStart_toEndOf="@+id/backGetPosFr"
@@ -38,7 +40,8 @@
         android:layout_width="match_parent"
         android:id="@+id/getPosFrGl"
         android:background="@drawable/ic_light_teme_light_blue_rect"
-        android:textColor="@color/text_color"        android:layout_height="0dp"
+        android:textColor="@color/text_color"
+        android:layout_height="0dp"
         app:barrierDirection="top"
         app:constraint_referenced_ids="backGetPosFr,setGetPosFr"
         />

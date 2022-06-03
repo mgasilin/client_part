@@ -29,10 +29,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".tempThings.EventShowCaseActivity"
+        <activity android:name=".tempThings.EventShowCaseActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".tempThings.NewEventActivity"
             android:theme="@style/AppTheme.NoActionBar"

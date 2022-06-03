@@ -2,11 +2,8 @@ package com.example.test.Server;
 
 import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.test.AdressService.GeoThing;
 import com.example.test.Entry.MainActivity;
 import com.example.test.Entry.RegisterActivity;
 import com.example.test.hubActivityFragments.HomeFragment;
@@ -20,7 +17,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.test.model.mapper.CommentMapper;
 import com.example.test.model.mapper.EventMapper;
@@ -28,7 +24,6 @@ import com.example.test.model.mapper.UserMapper;
 import com.example.test.tempThings.EventShowCaseActivity;
 import com.example.test.tempThings.ShowCaseFragment;
 import com.example.test.tempThings.ShowCaseMap;
-import com.google.android.gms.maps.model.LatLng;
 
 
 import org.json.JSONArray;
@@ -36,9 +31,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ServerServiceImpl implements ServerInterface {
     public static final String BASE_URL = "http://192.168.1.120:8081";

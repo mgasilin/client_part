@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.test.R;
@@ -22,25 +23,36 @@ public class ShowCaseFragment extends Fragment {
     private long id;
     private long userId;
 
+    private TextView date;
     private TextView name;
-    private TextView description;
     private TextView adress;
 
+    public static String beautifyEventDate(String date){
+        String res = "";
+        for (int i=0; i<8; i++){
+            res=res+String.valueOf(date.charAt(i));
+            if (i==1||i==3){
+                res=res+".";
+            }
+        }
+        return res;
+    }
 
     public ShowCaseFragment() {
     }
 
-    public void back(){
+    public void back() {
+        Toast.makeText(getActivity(), "Похоже, данное мероприятие было удалено", Toast.LENGTH_SHORT).show();
         destroy();
     }
 
     public void update(Event event) {
-        if (event == null) {
+        if (event == null||event.getName().isEmpty()) {
             destroy();
         } else {
-            name.setText(event.getName());
-            description.setText(event.getDescription());
-            adress.setText(event.getPlace());
+            date.setText("Дата проведения: "+beautifyEventDate(event.getDate()));
+            name.setText("Мероприятие: "+event.getName());
+            adress.setText("Место проведения: "+event.getPlace());
         }
     }
 
@@ -67,8 +79,8 @@ public class ShowCaseFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_show_case, container, false);
         name = view.findViewById(R.id.show_name);
-        description = view.findViewById(R.id.show_description);
         adress = view.findViewById(R.id.show_adress);
+        date=view.findViewById(R.id.show_date);
 
         AppCompatButton btn = view.findViewById(R.id.event_show);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +100,7 @@ public class ShowCaseFragment extends Fragment {
                 destroy();
             }
         });
-        Server.getEventById((int) id, getActivity(),ShowCaseFragment.this);
+        Server.getEventById((int) id, getActivity(), ShowCaseFragment.this);
         return view;
     }
 

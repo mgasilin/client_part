@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     class="androidx.appcompat.app.AlertController$RecycleListView"
     android:layout_width="match_parent"
-    android:background="@drawable/ic_light_theme_dark_blue_rectangle"
+    android:background="@drawable/ic_light_theme_background"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
+            android:textSize="15sp"
             android:layout_margin="16dp"
             android:textColor="@color/text_color"
             android:layout_width="match_parent"
@@ -19,6 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_height="wrap_content"/>
         <EditText
+            android:textSize="20sp"
             android:id="@+id/getName"
             android:textColor="@color/text_color"
             android:layout_width="match_parent"
@@ -26,11 +28,12 @@
             android:textColorHint="@color/text_color"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:hint="name"
+            android:hint="Введите имя мероприятия"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv1NewEv" />
 
         <TextView
+            android:textSize="15sp"
             android:layout_margin="16dp"
             android:textColor="@color/text_color"
             android:layout_width="match_parent"
@@ -40,6 +43,7 @@
             android:layout_height="wrap_content"/>
 
         <EditText
+            android:textSize="20sp"
             android:id="@+id/getDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +51,7 @@
             android:layout_gravity="center"
             android:textColor="@color/text_color"
             android:layout_margin="16dp"
-            android:hint="description"
+            android:hint="Опишите мероприятие"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv2NewEv" />
 
@@ -59,8 +63,8 @@
             android:layout_gravity="center"
             android:textColor="@color/text_color"
             android:layout_margin="16dp"
-            android:text="Адрес:"
-            android:textSize="20dp"
+            android:text="Адрес: не задан"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/startAdressActivity" />
 
@@ -72,11 +76,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="16dp"
-            android:text="задать адрес"
-            android:textColor="@color/text_color"
+            android:text="Задать адрес"
+            android:textSize="17sp"
+            android:textColor="@color/dark_text_color"
             app:layout_constraintTop_toBottomOf="@+id/getDescription" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/dateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/getAdress"
+            app:layout_constraintBottom_toTopOf="@+id/getDate"
+            android:layout_margin="16dp"
+            android:textSize="15sp"
+            android:textColor="@color/dark_text_color"
+            android:text="Дата проведения мероприятия"
+            android:layout_height="wrap_content"/>
         <EditText
+            android:textSize="20sp"
             android:id="@+id/getDate"
             android:layout_width="0dp"
             android:layout_margin="16dp"
@@ -85,15 +101,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/text_color"
-            android:gravity="center"
+            android:gravity="start"
             android:textColorHint="@color/text_color"
-            android:hint="дата в формате ддммгггг"
+            android:hint="Введите дату в формате ддммгггг"
             android:inputType="date"
-            app:layout_constraintTop_toBottomOf="@+id/getAdress" />
+            app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
 
         <androidx.constraintlayout.helper.widget.Flow
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
@@ -104,11 +118,16 @@
             app:flow_verticalStyle="packed"
             app:flow_wrapMode="chain"
             app:layout_constrainedWidth="true"
-            app:layout_constraintTop_toBottomOf="@+id/getDate"
             app:layout_constraintBottom_toTopOf="@+id/checkNewEvent"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/newEventFlow"
+            app:layout_constraintTop_toBottomOf="@+id/getDate"
+            app:layout_constraintVertical_bias="0.0" />
 
         <CheckBox
+            android:textSize="17sp"
             android:id="@+id/isStreet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,6 +138,7 @@
             android:text="Уличное мероприятие" />
 
         <CheckBox
+            android:textSize="17sp"
             android:id="@+id/isGroup"
             tools:ignore="MissingConstraints"
             android:layout_width="wrap_content"
@@ -130,6 +150,7 @@
             android:text="Групповое мероприятие" />
 
         <CheckBox
+            android:textSize="17sp"
             android:id="@+id/isFamily"
             tools:ignore="MissingConstraints"
             android:layout_width="wrap_content"
@@ -141,6 +162,7 @@
             android:text="Семейное мероприятие" />
 
         <CheckBox
+            android:textSize="17sp"
             android:id="@+id/isFree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -152,6 +174,7 @@
             android:text="Бесплатное мероприятие" />
 
         <CheckBox
+            android:textSize="17sp"
             android:id="@+id/hasCovid"
             android:layout_width="wrap_content"
             android:textColor="@color/text_color"
@@ -163,6 +186,7 @@
             android:text="Мероприятие с ковидными ограничениями" />
 
         <CheckBox
+            android:textSize="17sp"
             android:id="@+id/hasRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -174,6 +198,7 @@
             android:text="Мероприятие с регистрацией" />
 
         <CheckBox
+            android:textSize="17sp"
             android:id="@+id/isSport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -185,6 +210,7 @@
             android:text="Спротивное мероприятие" />
 
         <CheckBox
+            android:textSize="17sp"
             android:id="@+id/hasAgeRestrictions"
             android:textColor="@color/text_color"
             android:layout_width="wrap_content"
@@ -197,29 +223,32 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/checkNewEvent"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="@color/text_color"
+            android:textColor="@color/dark_text_color"
             app:layout_constraintStart_toStartOf="parent"
             android:background="@drawable/ic_light_teme_light_blue_rect"
             app:layout_constraintEnd_toStartOf="@+id/goBack"
+            app:layout_constraintTop_toBottomOf="@+id/newEventFlow"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text="done" />
-
+            android:layout_margin="10dp"
+            android:text="Готово" />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/goBack"
+            android:textSize="17sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="@color/text_color"
+            android:textColor="@color/dark_text_color"
             app:layout_constraintStart_toEndOf="@+id/checkNewEvent"
             android:background="@drawable/ic_light_teme_light_blue_rect"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/newEventFlow"
             app:layout_constraintBottom_toBottomOf="parent"
             android:text="Назад" />
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

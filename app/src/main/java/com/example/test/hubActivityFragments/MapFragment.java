@@ -2,7 +2,6 @@ package com.example.test.hubActivityFragments;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
@@ -10,7 +9,6 @@ import android.Manifest;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,9 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.test.AdressService.GeoThing;
@@ -32,13 +29,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -56,7 +50,7 @@ public class MapFragment extends Fragment {
     double main_lng;
     private SeekBar length;
     private CheckBox apply_categories, search;
-    private EditText len_text;
+    private TextView len_text;
     private ShowCaseFragment showCaseFragment;
     private Map<Marker, Long> m = new HashMap<Marker, Long>();
     private GoogleMap map;
@@ -223,7 +217,7 @@ public class MapFragment extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 len = i;
-                len_text.setText("" + i);
+                len_text.setText("Расстояние для поиска: " + len+" м");
                 SharedPreferences sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putInt("length", len);
@@ -254,35 +248,7 @@ public class MapFragment extends Fragment {
 
         len_text = view.findViewById(R.id.len);
         SharedPreferences sp = getActivity().getPreferences(Context.MODE_PRIVATE);
-        len_text.setText("" + sp.getInt("length", 0));
-        AppCompatButton set_length = view.findViewById(R.id.setLen);
-
-        set_length.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (len_text.getText().toString().isEmpty()) {
-                    Toast.makeText(getActivity(), "не указано расстояние", Toast.LENGTH_SHORT).show();
-                } else {
-                    len = Integer.parseInt(len_text.getText().toString());
-                    length.setProgress(len);
-                    SharedPreferences sharedPreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putInt("length", len);
-                    editor.apply();
-                    boolean length_search = search.isChecked();
-                    boolean apply_cats = apply_categories.isChecked();
-                    Server.getByCategories(getActivity(), getActivity().getPreferences(0), id, MapFragment.this);
-                    Server.findByLength(len, getActivity().getPreferences(0), getActivity(), MapFragment.this);
-                    if (length_search && apply_cats) {
-                        state = 3;
-                    } else if (length_search) {
-                        state = 1;
-                    } else {
-                        state = 2;
-                    }
-                }
-            }
-        });
+        len_text.setText("Расстояние для поиска: " + sp.getInt("length", 0)+" м");
         return view;
     }
 

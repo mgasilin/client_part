@@ -6,24 +6,24 @@
         android:id="@+id/main_home"
         android:icon="@drawable/ic_home"
         app:showAsAction="withText|always"
-        android:title="My events" />
+        android:title="Мои мероприятия" />
 
     <item
         android:id="@+id/categories"
         android:icon="@drawable/ic_categories"
         app:showAsAction="withText|always"
-        android:title="Categories" />
+        android:title="Категории" />
 
     <item
         android:id="@+id/search"
         android:icon="@drawable/ic_search"
         app:showAsAction="withText|always"
-        android:title="Search" />
+        android:title="Поиск" />
 
     <item
         android:id="@+id/map_view"
         android:icon="@drawable/ic_map"
-        android:title="Map"
+        android:title="Карта"
         app:showAsAction="withText|always"/>
 
 </menu>

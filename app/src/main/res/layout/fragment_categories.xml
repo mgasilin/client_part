@@ -12,6 +12,7 @@
         tools:context=".hubActivityFragments.CategoriesFragment">
 
         <CheckBox
+            android:textSize="18sp"
             android:id="@+id/Cat1"
             android:textColor="@color/text_color"
             android:layout_width="match_parent"
@@ -22,6 +23,7 @@
             android:text="Уличное мероприятие"
             />
         <CheckBox
+            android:textSize="18sp"
             android:id="@+id/Cat2"
             android:textColor="@color/text_color"
             android:layout_width="match_parent"
@@ -32,6 +34,7 @@
             android:text="Групповое мероприятие"
             />
         <CheckBox
+            android:textSize="18sp"
             android:id="@+id/Cat3"
             android:textColor="@color/text_color"
             android:layout_margin="10dp"
@@ -42,6 +45,7 @@
             android:text="Мероприятие для всей семьи"
             />
         <CheckBox
+            android:textSize="18sp"
             android:id="@+id/Cat4"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
@@ -52,6 +56,7 @@
             android:text="Бесплатное мероприятие"
             />
         <CheckBox
+            android:textSize="18sp"
             android:layout_margin="10dp"
             android:id="@+id/Cat5"
             android:layout_width="match_parent"
@@ -62,6 +67,7 @@
             android:text="Мероприятие с ковидными ограничениями"
             />
         <CheckBox
+            android:textSize="18sp"
             android:layout_margin="10dp"
             android:id="@+id/Cat6"
             android:layout_width="match_parent"
@@ -72,6 +78,7 @@
             android:text="Мероприятие с предварительной регистрацией"
             />
         <CheckBox
+            android:textSize="18sp"
             android:layout_margin="10dp"
             android:id="@+id/Cat7"
             android:layout_width="match_parent"
@@ -82,6 +89,7 @@
             android:text="Спротивное мероприятие"
             />
         <CheckBox
+            android:textSize="18sp"
             android:layout_margin="10dp"
             android:id="@+id/Cat8"
             android:layout_width="match_parent"
@@ -104,14 +112,17 @@
                 android:textColor="@color/text_color"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_height="match_parent"/>
+                android:textSize="18sp"
+                android:layout_height="wrap_content"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_margin="10dp"
+                android:textSize="17sp"
                 android:text="задать место"
-                android:textColor="@color/text_color"
+                android:textColor="@color/dark_text_color"
                 android:background="@drawable/ic_light_teme_light_blue_rect"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:id="@+id/setPos"
                 />
         </LinearLayout>

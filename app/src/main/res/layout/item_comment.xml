@@ -11,12 +11,14 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textStyle="bold"
+        android:textSize="27sp"
         android:layout_margin="10dp"
         android:id="@+id/author"
         />
     <TextView
         android:textColor="@color/text_color"
         android:layout_margin="10dp"
+        android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
